@@ -7,10 +7,12 @@ using CoherentNoise.Generation;
 
 public class GameBoard : MonoBehaviour {
 
-    public GameObject background;
+    public GameObject board;
     public GameObject tilePrefab;
     public GameObject tileHolder;
     public GameObject cubeHolder;
+
+    public Material boardColor;
 
     private List<List<GameObject>> cubeGrid;
     public int gridHeight;
@@ -32,10 +34,13 @@ public class GameBoard : MonoBehaviour {
 
     void GenerateBoardMap()
     {
-        background = Instantiate(background);
-        background.name = "Background";
-        background.transform.localScale = new Vector3(((float)gridHeight * 1.05f) / 10, 0, ((float)gridWidth * 1.05f) / 10);
-        background.transform.position = new Vector3(.5f, 0, .5f);
+        //GameObject board = GameObject.Instantiate(boardPrefab);
+        board.name = "Board";
+        board.transform.localScale = new Vector3(((float)gridHeight * 1.05f) / 10, 0, ((float)gridWidth * 1.05f) / 10);
+        board.transform.position = new Vector3(.5f, 0, .5f);
+        //Material boardMaterial = new Material(BoardBackgroundMaterial);
+        //boardMaterial.SetColor("_Color", BoardBackgroundMaterial.color);
+        //board.GetComponent<MeshRenderer>().material = boardPrefab.GetComponent<Material>();
 
         for (int x = 0; x < gridHeight; x += 2)
         {
@@ -44,7 +49,7 @@ public class GameBoard : MonoBehaviour {
             {
                 if (TestLocation(x,y))
                 {
-                    Debug.Log(x + " " + y);
+//Debug.Log(x + " " + y);
                     GameObject tile = Instantiate(tilePrefab);
                     sublist.Add(tile);
                     tile.transform.position = new Vector3(gridHeight / 2 - x - .5f, 3, gridWidth / 2 - y - .5f);
@@ -75,7 +80,10 @@ public class GameBoard : MonoBehaviour {
 
     bool TestLocation(int x, int y)
     {
-        return (heightMap.GetValue(x, y, 0) < threshold) && (heightMap.GetValue(x + 1, y, 0) < threshold) && (heightMap.GetValue(x, y + 1, 0) < threshold) && (heightMap.GetValue(x + 1, y + 1, 0) < threshold);
+        return (heightMap.GetValue(x, y, 0) < threshold) 
+            && (heightMap.GetValue(x + 1, y, 0) < threshold) 
+            && (heightMap.GetValue(x, y + 1, 0) < threshold) 
+            && (heightMap.GetValue(x + 1, y + 1, 0) < threshold);
     }
 
 /*    public class Board

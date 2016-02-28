@@ -17,6 +17,7 @@ public class RandomizedGrid : MonoBehaviour {
     //public int height;
     //public int width;
     public Material cubeColorBase;
+    public GameObject Cube;
 
     // Randomization data
    // private List<List<float>> heightMap = new List<List<float>>();
@@ -44,7 +45,8 @@ public class RandomizedGrid : MonoBehaviour {
                     continue;
                 }
 
-                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                GameObject cube = GameObject.Instantiate(Cube);
                 //cube.AddComponent<Rigidbody>();
                 //Debug.Log(noiseVal);
                 cube.transform.position = new Vector3(height / 2 - x, (noiseVal - threshold) / 2, width / 2 - y);
@@ -53,9 +55,9 @@ public class RandomizedGrid : MonoBehaviour {
                 Color cubeColor;
 				cubeColor = Color.white;//new Color((noiseVal - threshold) * 10, (noiseVal - threshold) * 10, (noiseVal - threshold) * 10);
 
-                Material newMat = new Material(cubeColorBase);
-                newMat.SetColor("_Color", cubeColor);
-                cube.GetComponent<MeshRenderer>().material = newMat;
+               //// Material newMat = new Material(cubeColorBase);
+               // newMat.SetColor("_Color", cubeColorBase.color);
+                //cube.GetComponent<MeshRenderer>().material = newMat;
 
                 cubeGridSub.Add(cube);
             }
