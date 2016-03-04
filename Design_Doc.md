@@ -38,3 +38,6 @@
 ## Upgrade class
 
 >Object types that modify the stat of units and subclasses.
+
+## Network Design
+* Update function of the game controller just checks for flags from player scripts that handles user input and sets a flag when user has submitted their move. 
