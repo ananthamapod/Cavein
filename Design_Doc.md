@@ -41,3 +41,18 @@
 
 ## Network Design
 * Update function of the game controller just checks for flags from player scripts that handles user input and sets a flag when user has submitted their move. 
+
+## Game Controller class
+
+Top level controller that manages the overall game.
+
+Contains references to:
+* List of players
+* Board
+* Game status
+
+## GameBoard class
+
+Contains graph of tiles
+Generates board obstacles (helper class RandomizedMap)
+
