@@ -56,3 +56,13 @@ Contains references to:
 Contains graph of tiles
 Generates board obstacles (helper class RandomizedMap)
 
+Game Mechanics
+
+Priority of Moves
+
+1. Melee
+2. Shooting
+3. Movement
+
+If 2 units move to the same tile they will push each other back to the last tile and both units will have melee damage inflicted to each other. 
+
