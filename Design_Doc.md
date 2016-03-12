@@ -64,5 +64,5 @@ Priority of Moves
 2. Shooting
 3. Movement
 
-If 2 units move to the same tile they will push each other back to the last tile and both units will have melee damage inflicted to each other. 
+If 2 units move to the same tile they will push each other back to the last tile they were on and both units will have melee damage inflicted to each other. 
 
