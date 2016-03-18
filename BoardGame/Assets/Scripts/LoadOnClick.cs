@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoadOnClick : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class LoadOnClick : MonoBehaviour {
                 Debug.Log("Loaded Level 1");
             }
         }
-        Application.LoadLevel(1);
+        SceneManager.LoadScene("TestBoard");
         
     }
 }
