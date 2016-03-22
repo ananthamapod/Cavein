@@ -20,11 +20,15 @@
 
 *	Solider – Decent everything. Mid range attack range, damage, speed and hp.
 
-*	Technician- Above average speed, below average hp, weak attack. Can set and disarm traps. 	Can test traps.
+*	Technician- Above average speed, below average hp, weak attack. Can set and disarm traps. Can test traps.
 
-*	Terraformer – Can create and destroy terrain. Low hp, close range attack, low speed, low 	damage attack.
+*	Terraformer – Can create and destroy terrain. Low hp, close range attack, low speed, low damage attack.
 
 *	Tank – Low move speed, high hp, medium attack damage, low range.
+
+*	Shotgun Bitch- AOE attack, close range, average move speed, high armor.
+
+*	Meat shield- No attack, high speed, dies in 1 hit, upon death guts explode releasing a biomass posion which damages and blinds ALL units in a square radius around it.
 
 
 ## Weapons class
